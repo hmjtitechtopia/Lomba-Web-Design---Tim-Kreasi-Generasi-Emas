@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jelajahi Nusantara</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-box">
+      <h1>Ayo, Jelajahi Nusantara</h1>
+      <p>
+        Temukan keindahan dan kekayaan budaya dari 38 provinsi di Indonesia.<br />
+        Dari Sabang sampai Merauke, dari Miangas hingga Rote.
+      </p>
+
+      <button id="btnExplore">Mulai Jelajahi</button>
+    </div>
+  </section>
+
+  <section id="explore" class="explore">
+    <div class="explore-head">
+      <h2>38 Provinsi Indonesia</h2>
+      <p>
+        Menelusuri kekayaan budaya, sejarah, dan keindahan alam yang memukau dari setiap provinsi di Nusantara.
+      </p>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari provinsi..." />
+        <button id="btnSearch">Cari</button>
+      </div>
+
+      <div class="region-filter">
+        <span>Wilayah:</span>
+        <button class="active" data-region="Semua">Semua</button>
+        <button data-region="Sumatera">Sumatera</button>
+        <button data-region="Jawa">Jawa</button>
+        <button data-region="Kalimantan">Kalimantan</button>
+        <button data-region="Sulawesi">Sulawesi</button>
+        <button data-region="Nusa Tenggara">Nusa Tenggara</button>
+        <button data-region="Maluku">Maluku</button>
+        <button data-region="Papua">Papua</button>
+      </div>
+
+      <p id="showCount">Menampilkan 38 provinsi</p>
+    </div>
+
+    <div id="cardList" class="card-grid"></div>
+  </section>
+
+  <div id="infoModal" class="modal">
+    <div class="modal-box">
+      <span id="closeModal" class="close">&times;</span>
+      <img id="image" src="" alt="" />
+      <h3 id="title"></h3>
+      <p><strong>Ibukota:</strong> <span id="capital"></span></p>
+      <p><strong>Sejarah:</strong> <span id="history"></span></p>
+      <p><strong>Budaya:</strong> <span id="culture"></span></p>
+      <p><strong>Rumah Adat:</strong> <span id="house"></span></p>
+      <p><strong>Makanan Khas:</strong> <span id="food"></span></p>
+      <p class="link"><a id="link" target="_blank">Baca selengkapnya disini</a></p>
+      <p class="source">sumber: id.wikipedia.org </p>
+    </div>
+  </div>
+
+
+  <footer>
+    <link rel="stylesheet" href="../css/footer.css" />
+    <div class="footer">
+      <div class="kontak">
+        <h1>ARCHIPELORE</h1>
+        <ul>
+          <li>
+            Temukan wajah Indonesia dari Sabang sampai Merauke.
+            Jendela pengetahuan yang
+            membawamu menyusuri ragam budaya,
+            sejarah, dan cerita di tiap provinsi.
+          </li>
+        </ul>
+      </div>
+      <div class="informasi">
+        <h1>Informasi</h1>
+        <ul>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="kebijakan.html">Kebijakan & Privasi</a></li>
+        </ul>
+      </div>
+      <div class="ikuti">
+        <h1>Ikuti Kami</h1>
+        <ul>
+          <li><img src="../images/icon/facebook.png" alt="Facebook" /></li>
+          <li><img src="../images/icon/x.png" alt="X" /></li>
+          <li><img src="../images/icon/instagram.png" alt="Instagram" /></li>
+          <li><img src="../images/icon/linkedin.png" alt="LinkedIn" /></li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright">
+      <p>© 2025 Archipelore. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

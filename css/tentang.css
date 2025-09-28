@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(90deg, #b23a48, #d94b58, #ff6b6b);
+  margin-bottom: 60px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeSlideDown 1s ease forwards;
+}
+
+.page-header h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  max-width: 1100px;
+  margin: 60px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 1s ease 1s forwards;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 1s ease 1.2s forwards;
+}
+
+.about-text h2 {
+  color: #b23a48;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #555;
+  text-align: justify;
+}
+
+.about-text .btn {
+  padding: 12px 25px;
+  background: #b23a48;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.about-text .btn:hover {
+  background: #a32242;
+  transform: translateY(-2px);
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 1s ease 1.4s forwards;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.values-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 1s ease 1.6s forwards;
+}
+
+.values-section h2 {
+  color: #b23a48;
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 0.9s ease forwards;
+}
+
+.value-card:nth-child(1) {
+  animation-delay: 1.8s;
+}
+
+.value-card:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.value-card:nth-child(3) {
+  animation-delay: 2.2s;
+}
+
+.value-card:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.value-card h3 {
+  color: #a32242;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.team-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 1s ease 2.6s forwards;
+}
+
+.team-section h2 {
+  color: #b23a48;
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  flex: 0 1 220px;
+}
+
+.team-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 0.9s ease forwards;
+}
+
+.team-card:nth-child(1) {
+  animation-delay: 2.8s;
+}
+
+.team-card:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.team-card:nth-child(3) {
+  animation-delay: 3.2s;
+}
+
+.team-card:nth-child(4) {
+  animation-delay: 3.4s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.team-card h3 {
+  color: #a32242;
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.team-card p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.team-desc {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .values-grid,
+  .team-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .value-card,
+  .team-member {
+    width: 85%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+  }
+
+  .about-text h2,
+  .values-section h2,
+  .team-section h2 {
+    font-size: 22px;
+  }
+
+  .about-text p,
+  .value-card p,
+  .team-card p,
+  .team-desc {
+    font-size: 14px;
+  }
+
+  .about-text .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 60px 15px 40px;
+  }
+
+  .about-text h2,
+  .values-section h2,
+  .team-section h2 {
+    font-size: 20px;
+  }
+
+  .about-text p,
+  .value-card p,
+  .team-card p,
+  .team-desc {
+    font-size: 13px;
+  }
+
+  .about-text .btn {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+}
