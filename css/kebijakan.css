@@ -1,0 +1,147 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.page-header {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: linear-gradient(90deg, #b23a48, #d94b58, #ff6b6b);
+  margin-bottom: 60px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeSlideDown 1s ease forwards;
+}
+
+.page-header h1 {
+  color: #fff;
+  font-size: 46px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #fcecec;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+main {
+  max-width: 820px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+h1,
+h2 {
+  margin: 12px 0;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+section p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: #b23a48;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff6b6b;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 36px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 0 12px;
+  }
+
+  section {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+}
