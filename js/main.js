@@ -463,7 +463,7 @@ function showProvinces(list) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-      <img src="../images/provinsi/${p.image}" alt="${p.name}">
+      <img src="images/provinsi/${p.image}" alt="${p.name}">
       <div class="card-body">
         <h3>${p.name}</h3>
         <p><strong>Ibukota:</strong> ${p.capital}</p>
@@ -478,7 +478,7 @@ function showProvinces(list) {
 
 function openModal(province) {
   modal.style.display = "flex";
-  modalImage.src = `../images/provinsi/${province.image}`;
+  modalImage.src = `images/provinsi/${province.image}`;
   modalTitle.textContent = `${province.name} | ${province.region}`;
   modalCapital.textContent = province.capital || "-";
   modalCulture.textContent = province.culture || "-";
@@ -522,5 +522,6 @@ regionBtns.forEach((btn) => {
     filterProvinces();
   });
 });
+
 
 showProvinces(provinces);
